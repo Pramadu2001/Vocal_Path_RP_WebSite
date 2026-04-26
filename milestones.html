@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .page-hero-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .page-hero-wrap img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 12px 40px rgba(108, 63, 232, 0.16);
+            object-fit: cover;
+            aspect-ratio: 16/9;
+        }
+
+        @media(max-width:760px) {
+            .page-hero-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero-wrap img {
+                display: none;
+            }
+        }
+    </style>
+    <title>Milestones — Vocal Path</title>
+    <meta name="description"
+        content="Project Milestones and Assessment Details for Vocal Path Research Group 25-26J 383">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/AppLogo1.png" alt="Vocal Path Logo" class="logo-icon" style="background: white; object-fit: contain; padding: 2px;">
+                Vocal<span>Path</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="domain.html">Domain</a></li>
+                <li><a href="milestones.html" class="active">Milestones</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="presentations.html">Presentations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div style="background: var(--grad-hero); padding: 7rem 0 3.5rem; border-bottom: 1px solid var(--border);">
+        <div class="container fade-in">
+            <div class="page-hero-wrap">
+                <div>
+                    <div class="badge badge-primary"><i class="fa-solid fa-flag-checkered"></i> Project Milestones</div>
+                    <h1 style="margin-top:0.6rem;">Assessment <span class="grad-text">Milestones</span></h1>
+                    <p style="font-size:1.05rem;max-width:520px;margin-top:0.8rem;">Track all project assessments, their
+                        objectives, dates, and allocated marks. Select a milestone from the dropdown to view full
+                        details.</p>
+                    <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+                        <span class="tag"><i class="fa-solid fa-percent"></i> 100% Marks Total</span>
+                        <span class="tag"><i class="fa-solid fa-calendar"></i> 2025–2026</span>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=700&q=80&auto=format&fit=crop"
+                    alt="Project milestones and planning" loading="eager">
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- OVERVIEW CARDS -->
+        <section style="background: var(--bg-white);">
+            <div class="container">
+                <div class="grid-4 fade-in">
+                    <div class="card" style="text-align:center; padding:1.5rem; cursor:pointer;"
+                        onclick="selectMilestone('proposal')">
+                        <div class="card-icon card-icon-purple" style="margin:0 auto 0.8rem;"><i
+                                class="fa-solid fa-file-contract"></i></div>
+                        <h4>Project Proposal</h4>
+                        <p style="font-size:0.82rem;">Nov 2025</p>
+                        <span
+                            style="background:rgba(108,63,232,0.12); color:var(--primary); font-weight:700; font-size:0.9rem; padding:0.3rem 0.8rem; border-radius:20px; display:inline-block; margin-top:0.5rem;">5%</span>
+                    </div>
+                    <div class="card" style="text-align:center; padding:1.5rem; cursor:pointer;"
+                        onclick="selectMilestone('pp1')">
+                        <div class="card-icon card-icon-blue" style="margin:0 auto 0.8rem;"><i
+                                class="fa-solid fa-person-chalkboard"></i></div>
+                        <h4>Progress Presentation 1</h4>
+                        <p style="font-size:0.82rem;">Feb 2026</p>
+                        <span
+                            style="background:rgba(14,165,233,0.12); color:var(--secondary); font-weight:700; font-size:0.9rem; padding:0.3rem 0.8rem; border-radius:20px; display:inline-block; margin-top:0.5rem;">15%</span>
+                    </div>
+                    <div class="card" style="text-align:center; padding:1.5rem; cursor:pointer;"
+                        onclick="selectMilestone('pp2')">
+                        <div class="card-icon card-icon-green" style="margin:0 auto 0.8rem;"><i
+                                class="fa-solid fa-chart-line"></i></div>
+                        <h4>Progress Presentation 2</h4>
+                        <p style="font-size:0.82rem;">Apr 2026</p>
+                        <span
+                            style="background:rgba(16,185,129,0.12); color:var(--accent); font-weight:700; font-size:0.9rem; padding:0.3rem 0.8rem; border-radius:20px; display:inline-block; margin-top:0.5rem;">18%</span>
+                    </div>
+                    <div class="card" style="text-align:center; padding:1.5rem; cursor:pointer;"
+                        onclick="selectMilestone('final')">
+                        <div class="card-icon card-icon-rose" style="margin:0 auto 0.8rem;"><i
+                                class="fa-solid fa-trophy"></i></div>
+                        <h4>Final Assessment</h4>
+                        <p style="font-size:0.82rem;">May 06, 2026</p>
+                        <span
+                            style="background:rgba(244,63,94,0.12); color:var(--rose); font-weight:700; font-size:0.9rem; padding:0.3rem 0.8rem; border-radius:20px; display:inline-block; margin-top:0.5rem;">10%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DROPDOWN + DETAIL -->
+        <section>
+            <div class="container fade-in">
+                <div style="max-width:760px; margin:0 auto;">
+                    <label
+                        style="font-weight:700; font-size:1rem; display:block; margin-bottom:0.8rem; color:var(--text-primary);">
+                        <i class="fa-solid fa-hand-pointer" style="color:var(--primary); margin-right:6px;"></i>
+                        Select a Milestone to View Full Details
+                    </label>
+                    <select class="styled-select" id="milestone-select" onchange="selectMilestone(this.value)">
+                        <option value="" disabled selected>Choose a milestone...</option>
+                        <option value="proposal">📄 Project Proposal</option>
+                        <option value="pp1">📊 Progress Presentation 1</option>
+                        <option value="pp2">🚀 Progress Presentation 2</option>
+                        <option value="final">🏆 Final Assessment</option>
+                        <option value="viva">🎤 Viva</option>
+                    </select>
+
+                    <!-- Default State -->
+                    <div class="card" id="default-panel" style="text-align:center; padding:3rem; margin-top:1.5rem;">
+                        <div style="font-size:3rem; margin-bottom:1rem;">📋</div>
+                        <h3>Select a milestone above to view its full details.</h3>
+                        <p>Each milestone card above is also clickable to jump directly to that entry.</p>
+                    </div>
+
+                    <!-- PROPOSAL -->
+                    <div class="milestone-panel card" id="panel-proposal" style="margin-top:1.5rem;">
+                        <div
+                            style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+                            <div style="display:flex; align-items:center; gap:1rem;">
+                                <div class="card-icon card-icon-purple" style="margin:0;"><i
+                                        class="fa-solid fa-file-contract"></i></div>
+                                <div>
+                                    <h2 style="margin:0; font-size:1.6rem;">Project Proposal</h2><span
+                                        class="tag">Assessment 1</span>
+                                </div>
+                            </div>
+                            <div style="text-align:right;">
+                                <span
+                                    style="background:var(--grad-primary); color:white; font-weight:800; font-size:1.3rem; padding:0.5rem 1.4rem; border-radius:30px;">5%</span>
+                            </div>
+                        </div>
+                        <div class="grid-2" style="gap:1rem; margin-bottom:1.5rem;">
+                            <div class="highlight-box"><strong><i class="fa-solid fa-calendar"
+                                        style="color:var(--primary); margin-right:6px;"></i>Date:</strong> 5th November
+                                2025</div>
+                            <div class="highlight-box"><strong><i class="fa-solid fa-location-dot"
+                                        style="color:var(--primary); margin-right:6px;"></i>Supervisor
+                                    Sign-Off:</strong> Prof. Thelijjagoda, Dr. Anjana, Prof. Wanigasinghe</div>
+                        </div>
+                        <h4 style="margin-bottom:0.8rem; color:var(--text-primary);">What Was Delivered:</h4>
+                        <ul
+                            style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; color:var(--text-muted);">
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Comprehensive research problem
+                                identification and justification</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Literature survey on stuttering,
+                                ML-based detection, and digital therapy</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Identification of 4 critical
+                                research gaps in existing systems</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Proposed 4-component system
+                                architecture for Vocal Path</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Project scope, stakeholders, and
+                                timeline defined</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Group declaration and supervisor
+                                acknowledgments signed</li>
+                        </ul>
+                    </div>
+
+                    <!-- PP1 -->
+                    <div class="milestone-panel card" id="panel-pp1" style="margin-top:1.5rem;">
+                        <div
+                            style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+                            <div style="display:flex; align-items:center; gap:1rem;">
+                                <div class="card-icon card-icon-blue" style="margin:0;"><i
+                                        class="fa-solid fa-person-chalkboard"></i></div>
+                                <div>
+                                    <h2 style="margin:0; font-size:1.6rem;">Progress Presentation 1</h2><span
+                                        class="tag">Assessment 2</span>
+                                </div>
+                            </div>
+                            <span
+                                style="background:var(--grad-primary); color:white; font-weight:800; font-size:1.3rem; padding:0.5rem 1.4rem; border-radius:30px;">15%</span>
+                        </div>
+                        <div class="grid-2" style="gap:1rem; margin-bottom:1.5rem;">
+                            <div class="highlight-box blue"><strong><i class="fa-solid fa-calendar"
+                                        style="color:var(--secondary); margin-right:6px;"></i>Date:</strong> February
+                                2026</div>
+                            <div class="highlight-box blue"><strong><i class="fa-solid fa-users"
+                                        style="color:var(--secondary); margin-right:6px;"></i>Presented By:</strong>
+                                Group 25-26J 383</div>
+                        </div>
+                        <h4 style="margin-bottom:0.8rem; color:var(--text-primary);">What Was Delivered:</h4>
+                        <ul
+                            style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; color:var(--text-muted);">
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Problem statement with detailed
+                                stakeholder impact analysis (children, parents, SLPs)</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Initial prototype preview with
+                                proof-of-concept demos</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Architecture overview: Flutter
+                                mobile app + Flask microservices + Firebase</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Individual component breakdown: 4
+                                members, 4 AI sub-systems</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Commercialization potential: USD
+                                16.5B assistive tech market by 2030</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Market personas and
+                                sustainability strategy presented</li>
+                        </ul>
+                    </div>
+
+                    <!-- PP2 -->
+                    <div class="milestone-panel card" id="panel-pp2" style="margin-top:1.5rem;">
+                        <div
+                            style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+                            <div style="display:flex; align-items:center; gap:1rem;">
+                                <div class="card-icon card-icon-green" style="margin:0;"><i
+                                        class="fa-solid fa-chart-line"></i></div>
+                                <div>
+                                    <h2 style="margin:0; font-size:1.6rem;">Progress Presentation 2</h2><span
+                                        class="tag">Assessment 3</span>
+                                </div>
+                            </div>
+                            <span
+                                style="background:var(--grad-primary); color:white; font-weight:800; font-size:1.3rem; padding:0.5rem 1.4rem; border-radius:30px;">18%</span>
+                        </div>
+                        <div class="grid-2" style="gap:1rem; margin-bottom:1.5rem;">
+                            <div class="highlight-box green"><strong><i class="fa-solid fa-calendar"
+                                        style="color:var(--accent); margin-right:6px;"></i>Date:</strong> April 2026
+                            </div>
+                            <div class="highlight-box green"><strong><i class="fa-solid fa-star"
+                                        style="color:var(--accent); margin-right:6px;"></i>Status:</strong> Completed ✓
+                            </div>
+                        </div>
+                        <h4 style="margin-bottom:0.8rem; color:var(--text-primary);">Key Achievements Presented:</h4>
+                        <div class="grid-2" style="gap:0.8rem;">
+                            <div>
+                                <strong style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Component 1 –
+                                    K.P.S. Chithakshana</strong>
+                                <ul
+                                    style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; color:var(--text-muted); font-size:0.88rem;">
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--primary); margin-right:6px;"></i>Wav2Vec2 XLS-R
+                                        stuttering detector: 88.18% accuracy</li>
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--primary); margin-right:6px;"></i>Random Forest
+                                        stutter-type: 98.34% (4 classes)</li>
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--primary); margin-right:6px;"></i>Validated by SLPs —
+                                        closely matches clinical evaluations</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Component 2 –
+                                    S.M.C.N. Serasinghe</strong>
+                                <ul
+                                    style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; color:var(--text-muted); font-size:0.88rem;">
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--secondary); margin-right:6px;"></i>Hybrid rule-based +
+                                        KNN adaptive recommender</li>
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--secondary); margin-right:6px;"></i>Severity
+                                        classification: mild / moderate / severe</li>
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--secondary); margin-right:6px;"></i>Cloud-synced exercise
+                                        difficulty adjustment</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Component 3 –
+                                    R.G.S.N.C. Rathninda</strong>
+                                <ul
+                                    style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; color:var(--text-muted); font-size:0.88rem;">
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--accent); margin-right:6px;"></i>Dual-fallback ASR:
+                                        Whisper + Google STT</li>
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--accent); margin-right:6px;"></i>SVM fluency classifier:
+                                        89.75% accuracy</li>
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--accent); margin-right:6px;"></i>Sub-300ms phoneme
+                                        feedback delivery</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Component 4 –
+                                    Fernando K.A.I.</strong>
+                                <ul
+                                    style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; color:var(--text-muted); font-size:0.88rem;">
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--rose); margin-right:6px;"></i>LSTM time-series progress
+                                        prediction model</li>
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--rose); margin-right:6px;"></i>Real-time Flutter dashboard
+                                        for clinicians</li>
+                                    <li><i class="fa-solid fa-circle-dot"
+                                            style="color:var(--rose); margin-right:6px;"></i>Cloud-based severity score
+                                        visualization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FINAL -->
+                    <div class="milestone-panel card" id="panel-final" style="margin-top:1.5rem;">
+                        <div
+                            style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+                            <div style="display:flex; align-items:center; gap:1rem;">
+                                <div class="card-icon card-icon-rose" style="margin:0;"><i
+                                        class="fa-solid fa-trophy"></i></div>
+                                <div>
+                                    <h2 style="margin:0; font-size:1.6rem;">Final Assessment</h2><span
+                                        class="tag">Assessment 4</span>
+                                </div>
+                            </div>
+                            <span
+                                style="background:var(--grad-primary); color:white; font-weight:800; font-size:1.3rem; padding:0.5rem 1.4rem; border-radius:30px;">10%</span>
+                        </div>
+                        <div class="grid-2" style="gap:1rem; margin-bottom:1.5rem;">
+                            <div class="highlight-box"><strong><i class="fa-solid fa-calendar"
+                                        style="color:var(--primary); margin-right:6px;"></i>Date:</strong> May 06, 2026
+                            </div>
+                            <div class="highlight-box"><strong><i class="fa-solid fa-hospital"
+                                        style="color:var(--primary); margin-right:6px;"></i>Clinical
+                                    Evaluation:</strong> Lady Ridgeway Hospital (50–80 children)</div>
+                        </div>
+                        <h4 style="margin-bottom:0.8rem;">Expected Deliverables:</h4>
+                        <ul
+                            style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; color:var(--text-muted);">
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Fully integrated Vocal Path
+                                platform (all 4 components)</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Per-language stratified
+                                performance analysis (Sinhala vs. English)</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Formal usability study with child
+                                participants at Lady Ridgeway Hospital</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>End-to-end clinical evaluation
+                                with certified SLPs</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Longitudinal outcome studies
+                                measuring therapeutic effectiveness</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Complete final research paper and
+                                technical documentation</li>
+                        </ul>
+                    </div>
+
+                    <!-- VIVA -->
+                    <div class="milestone-panel card" id="panel-viva" style="margin-top:1.5rem;">
+                        <div
+                            style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+                            <div style="display:flex; align-items:center; gap:1rem;">
+                                <div class="card-icon card-icon-amber" style="margin:0;"><i
+                                        class="fa-solid fa-comments"></i></div>
+                                <div>
+                                    <h2 style="margin:0; font-size:1.6rem;">Viva</h2><span class="tag">Assessment
+                                        5</span>
+                                </div>
+                            </div>
+                            <span
+                                style="background:var(--grad-primary); color:white; font-weight:800; font-size:1.3rem; padding:0.5rem 1.4rem; border-radius:30px;">17%</span>
+                        </div>
+                        <div class="grid-2" style="gap:1rem; margin-bottom:1.5rem;">
+                            <div class="highlight-box"><strong><i class="fa-solid fa-calendar"
+                                        style="color:var(--primary); margin-right:6px;"></i>Date:</strong> November 2026
+                            </div>
+                            <div class="highlight-box"><strong><i class="fa-solid fa-user-graduate"
+                                        style="color:var(--primary); margin-right:6px;"></i>Format:</strong> Individual
+                                + Group Oral Examination</div>
+                        </div>
+                        <h4 style="margin-bottom:0.8rem;">Assessment Focus Areas:</h4>
+                        <ul
+                            style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; color:var(--text-muted);">
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Individual technical knowledge
+                                depth on each member's component</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Understanding of ML models,
+                                architectures, and design decisions</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Group synergy and cross-component
+                                integration awareness</li>
+                            <li><i class="fa-solid fa-circle-check"
+                                    style="color:var(--accent); margin-right:8px;"></i>Research methodology,
+                                limitations, and future work discussion</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 <strong style="color:white;">Vocal Path</strong> · Group 25-26J 383 · Sri Lanka Institute of
+                Information Technology (SLIIT)</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+        });
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        function selectMilestone(val) {
+            document.getElementById('milestone-select').value = val;
+            document.getElementById('default-panel').style.display = 'none';
+            document.querySelectorAll('.milestone-panel').forEach(p => p.classList.remove('active'));
+            const panel = document.getElementById('panel-' + val);
+            if (panel) { panel.classList.add('active'); panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        }
+    </script>
+</body>
+
+</html>

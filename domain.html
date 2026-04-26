@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .page-hero-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;}
+    .page-hero-wrap img{width:100%;border-radius:18px;box-shadow:0 12px 40px rgba(108,63,232,0.16);object-fit:cover;aspect-ratio:16/9;}
+    @media(max-width:760px){.page-hero-wrap{grid-template-columns:1fr;}.page-hero-wrap img{display:none;}}
+  </style>
+  <title>Domain — Vocal Path Research</title>
+  <meta name="description" content="Research Domain: Literature Survey, Research Gap, Objectives, Methodology, and Technologies for Vocal Path.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/AppLogo1.png" alt="Vocal Path Logo" class="logo-icon" style="background: white; object-fit: contain; padding: 2px;">
+      Vocal<span>Path</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="domain.html" class="active">Domain</a></li>
+      <li><a href="milestones.html">Milestones</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="presentations.html">Presentations</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background: var(--grad-hero); padding: 7rem 0 3.5rem; border-bottom: 1px solid var(--border);">
+  <div class="container fade-in">
+    <div class="page-hero-wrap">
+      <div>
+        <div class="badge badge-primary"><i class="fa-solid fa-book-open"></i> Research Domain</div>
+        <h1 style="margin-top:0.6rem;">Domain <span class="grad-text">Information</span></h1>
+        <p style="font-size:1.05rem;max-width:520px;margin-top:0.8rem;">Comprehensive research background, problem analysis, objectives, methodology, and technical foundations of the Vocal Path project.</p>
+        <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <span class="tag"><i class="fa-solid fa-microphone"></i> Stuttering Detection</span>
+          <span class="tag"><i class="fa-solid fa-brain"></i> Deep Learning</span>
+          <span class="tag"><i class="fa-solid fa-language"></i> Bilingual NLP</span>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=700&q=80&auto=format&fit=crop" alt="Speech therapy research" loading="eager">
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- LITERATURE SURVEY -->
+<section style="background: var(--bg-white);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="badge badge-primary"><i class="fa-solid fa-book"></i> Literature Survey</div>
+      <h2>Background & <span class="grad-text">Related Work</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid-2 fade-in">
+      <div class="card">
+        <div class="card-icon card-icon-purple"><i class="fa-solid fa-stethoscope"></i></div>
+        <h3>Clinical Characterization</h3>
+        <p>Stuttering is a speech fluency disorder characterized by involuntary disruptions: <strong>sound/syllable repetitions</strong> (e.g., "b-b-ball"), <strong>prolongations</strong> (e.g., "ssssun"), and <strong>speech blocks</strong>. It affects 5–8% of children and ~1% of the global population, with the critical window being ages 5–10.</p>
+        <div class="highlight-box" style="margin-top:1rem;">
+          <strong>Psychosocial Impact:</strong> Children experience social anxiety, reduced academic participation, diminished self-esteem, and communication avoidance behaviors.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-blue"><i class="fa-solid fa-robot"></i></div>
+        <h3>ML Approaches Reviewed</h3>
+        <p>The field has evolved from traditional classifiers to state-of-the-art transformer models:</p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin-top:0.8rem;">
+          <li><span class="tag">SVM + MFCC</span> <span style="font-size:0.88rem; color:var(--text-muted); margin-left:8px;">72–80% accuracy — baseline</span></li>
+          <li><span class="tag">CNN on Spectrogram</span> <span style="font-size:0.88rem; color:var(--text-muted); margin-left:8px;">78–82% accuracy</span></li>
+          <li><span class="tag">Wav2Vec2-Base (English)</span> <span style="font-size:0.88rem; color:var(--text-muted); margin-left:8px;">84–86% accuracy</span></li>
+          <li><span class="tag">CNN + ConvLSTM</span> <span style="font-size:0.88rem; color:var(--text-muted); margin-left:8px;">85–88% accuracy</span></li>
+          <li><span class="tag" style="background:var(--bg-muted); color:var(--primary); font-weight:700;">Our Wav2Vec2 XLS-R 300M</span> <span style="font-size:0.88rem; color:var(--accent); margin-left:8px; font-weight:600;">88.18% | F1: 0.891</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-green"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Existing Commercial Apps</h3>
+        <p>Current commercial applications — <em>Stuttering Therapy Lite, Fluency Tracker, DAF Pro, Stamurai</em> — offer isolated features. <strong>None combines</strong> automated audio-only detection, multilingual support, AI-driven exercise recommendation, and continuous progress tracking within a single integrated platform.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-amber"><i class="fa-solid fa-globe"></i></div>
+        <h3>Digital Therapy Research</h3>
+        <p>Castillo et al. demonstrated ASR + fluency tracking can enable semi-autonomous remote therapy. Cloud-based platforms have been advocated for rural access. The Lidcombe Programme highlights continuous measurement and parent involvement for children aged 6–12.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH GAP -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="badge badge-primary"><i class="fa-solid fa-magnifying-glass-arrow-right"></i> Research Gap</div>
+      <h2>Four Critical <span class="grad-text">Gaps Identified</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid-2 fade-in">
+      <div class="card" style="border-left: 4px solid var(--rose);">
+        <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:0.8rem;">
+          <span style="background:rgba(244,63,94,0.12); color:var(--rose); width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem;">1</span>
+          <h3 style="margin:0;">Monolingual Limitation</h3>
+        </div>
+        <p>Current automated systems are trained exclusively on English corpora and cannot generalize to other languages. <strong>No validated Sinhala stuttering detection model exists in the literature</strong>, representing a major clinical gap for Sri Lanka's 21 million people.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--amber);">
+        <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:0.8rem;">
+          <span style="background:rgba(245,158,11,0.12); color:var(--amber); width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem;">2</span>
+          <h3 style="margin:0;">Static Point-in-Time Assessment</h3>
+        </div>
+        <p>Existing automated tools provide only static assessments rather than <strong>continuous longitudinal monitoring</strong>. Clinicians cannot track improvement over time, severely limiting therapeutic effectiveness for children during the critical 5–10 age window.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--secondary);">
+        <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:0.8rem;">
+          <span style="background:rgba(14,165,233,0.12); color:var(--secondary); width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem;">3</span>
+          <h3 style="margin:0;">No Personalized Adaptive Intervention</h3>
+        </div>
+        <p>Existing platforms offer one-size-fits-all exercises. There is no system that <strong>dynamically adjusts therapy difficulty</strong> based on individual performance history — a critical requirement for effective, data-driven speech therapy for children.</p>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--primary);">
+        <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:0.8rem;">
+          <span style="background:var(--bg-muted); color:var(--primary); width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem;">4</span>
+          <h3 style="margin:0;">Inaccessibility in Resource-Limited Settings</h3>
+        </div>
+        <p>Rural communities in Sri Lanka have <strong>limited access to Speech-Language Pathologists (SLPs)</strong>. Existing tools require clinic visits and specialized equipment, making early detection and continuous therapy impossible for the majority of affected children.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH PROBLEM & OBJECTIVES -->
+<section style="background: var(--bg-white);">
+  <div class="container">
+    <div class="grid-2 fade-in" style="align-items: start; gap: 3rem;">
+      <div>
+        <div class="badge badge-primary"><i class="fa-solid fa-triangle-exclamation"></i> Research Problem</div>
+        <h2 style="text-align:left; margin-bottom:1.5rem;">The Core <span class="grad-text">Problem Statement</span></h2>
+        <p style="font-size:1.1rem;">Stuttering disrupts the natural flow and rhythm of speech in children aged 5–10. Limited access to qualified Speech-Language Therapists, especially in rural areas, means children go undiagnosed during their most critical developmental window.</p>
+        <div class="highlight-box" style="margin-top:1.5rem;">
+          <strong>Without early detection:</strong> Delayed therapy reduces treatment success, while untreated stuttering leads to anxiety, social withdrawal, and long-term academic disadvantage.
+        </div>
+        <div class="highlight-box blue" style="margin-top:1rem;">
+          <strong>No existing solution</strong> addresses Sinhala — Sri Lanka's primary language — leaving a substantial clinical gap for a population of ~21 million.
+        </div>
+      </div>
+      <div>
+        <div class="badge badge-green"><i class="fa-solid fa-bullseye"></i> Research Objectives</div>
+        <h2 style="text-align:left; margin-bottom:1.5rem;">Project <span class="grad-text">Objectives</span></h2>
+        <div class="card" style="margin-bottom:1rem; padding:1.5rem;">
+          <div style="display:flex; gap:0.8rem; align-items:flex-start;">
+            <div style="background:var(--grad-primary); color:white; width:32px; height:32px; min-width:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem;">M</div>
+            <div>
+              <strong style="display:block; margin-bottom:0.3rem; color:var(--text-primary);">Main Objective</strong>
+              <p style="font-size:0.92rem; margin:0;">Build a cloud-based, AI-powered platform delivering personalized, audio-only speech therapy for children who stutter in Sri Lanka.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-dot">S1</div><div><strong style="display:block;">Bilingual Stutter Detection</strong><p style="font-size:0.88rem; margin:0;">Detect repetitions, prolongations & blocks in English and Sinhala using Wav2Vec2 XLS-R 300M.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot">S2</div><div><strong style="display:block;">Adaptive Exercise Recommendation</strong><p style="font-size:0.88rem; margin:0;">Classify severity and personalize exercise difficulty using KNN with performance history.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot">S3</div><div><strong style="display:block;">Pronunciation Feedback</strong><p style="font-size:0.88rem; margin:0;">Deliver phoneme-level corrective feedback in under 300ms via ASR and SVM classifier.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot" style="margin-bottom:0;">S4</div><div><strong style="display:block;">Progress Tracking & Forecasting</strong><p style="font-size:0.88rem; margin:0;">Predict fluency improvement trends using LSTM across multiple therapy sessions.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="badge badge-blue"><i class="fa-solid fa-gears"></i> Methodology</div>
+      <h2>System <span class="grad-text">Architecture & Methodology</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid-2 fade-in">
+      <div class="card">
+        <div class="card-icon card-icon-purple"><i class="fa-solid fa-waveform-lines"></i></div>
+        <h3>Component 1: Stuttering Classifier</h3>
+        <p>Fine-tuned <strong>Wav2Vec2 XLS-R 300M</strong> on a stratified bilingual corpus (English SEP-28K + Sinhala recordings). Binary classifier: Stutter vs. No-Stutter. 80/20 stratified train-test split on language and label simultaneously to ensure equitable language performance.</p>
+        <div class="highlight-box" style="margin-top:1rem;">
+          <strong>Stutter-Type Classifier:</strong> Downstream Random Forest on 13-MFCC features achieves 98.34% for 4 classes: Part-word Repetition, Prolongation, Block, Whole-word Repetition.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-blue"><i class="fa-solid fa-dumbbell"></i></div>
+        <h3>Component 2: Exercise Recommender</h3>
+        <p>Hybrid rule-based + ML architecture classifies users into <strong>mild, moderate, and severe</strong> stuttering levels. Learns from historical accuracy, attempts, and response time to dynamically adjust exercise difficulty. Continuously updates cloud-based recommendations to simulate clinician-guided therapy.</p>
+        <div class="highlight-box blue" style="margin-top:1rem;">
+          <strong>K-Means pseudo-labeling</strong> followed by supervised KNN classification — effective for constructing classifiers where per-recording expert annotations are unavailable at scale.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-green"><i class="fa-solid fa-comment-dots"></i></div>
+        <h3>Component 3: Pronunciation Checker</h3>
+        <p><strong>Dual-fallback ASR:</strong> OpenAI Whisper (primary) + Google Cloud STT (en-US & si-LK) for robust recognition. IPA phoneme sequence aligned using <strong>Levenshtein edit distance</strong> and phonetically-informed substitution costs. Composite score: 50% phoneme edit distance + 25% speech rate + 25% fluency continuity.</p>
+        <div class="highlight-box green" style="margin-top:1rem;">
+          <strong>SVM fluency classifier:</strong> ~420-dim acoustic feature vector (MFCCs, F0/pitch, ZCR, RMS, spectral features). RBF kernel, C=10, gamma=0.01 — 89.75% accuracy.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-amber"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Component 4: Progress Dashboard</h3>
+        <p><strong>LSTM architecture</strong> captures temporal patterns across multiple therapy sessions. Provides quantitative severity scores and confidence levels. Deployed as a RESTful Flask service for real-time prediction delivery to Flutter mobile app. Progress visualized through intuitive dashboards with trend lines.</p>
+        <div class="highlight-box" style="margin-top:1rem;">
+          <strong>Early stopping</strong> with patience=7 and best-checkpoint saving mitigates overfitting during fine-tuning on small task-specific datasets.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGIES USED -->
+<section style="background: var(--bg-white);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="badge badge-green"><i class="fa-solid fa-microchip"></i> Technologies Used</div>
+      <h2>Complete <span class="grad-text">Technology Stack</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid-3 fade-in">
+      <div class="card">
+        <div class="card-icon card-icon-purple"><i class="fa-solid fa-brain"></i></div>
+        <h3>Machine Learning Models</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; margin-top:0.5rem;">
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>Wav2Vec2 XLS-R 300M (Hugging Face)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>LSTM (Time-Series Progress Prediction)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>Random Forest (Stutter-Type)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>SVM with RBF Kernel (Fluency)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>KNN (Exercise Recommendation)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>K-Means (Pseudo-Labeling)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-blue"><i class="fa-solid fa-microphone"></i></div>
+        <h3>Speech & Audio Processing</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; margin-top:0.5rem;">
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>OpenAI Whisper (Primary ASR)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>Google Cloud STT (en-US + si-LK)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>librosa (Feature Extraction)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>MFCCs (n=40) + Delta Coefficients</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>YIN Algorithm (F0/Pitch Estimation)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>CMUdict + Custom Sinhala G2P Lexicon</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-green"><i class="fa-solid fa-server"></i></div>
+        <h3>Backend & Infrastructure</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; margin-top:0.5rem;">
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>Flask (RESTful Microservices API)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>Firebase Firestore (Session Storage)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>Flutter (Cross-Platform Mobile App)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>scikit-learn (GridSearchCV, Pipeline)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>StandardScaler (Feature Normalization)</li>
+          <li><i class="fa-solid fa-check" style="color:var(--accent); margin-right:8px;"></i>Cloud-Based Recommendation Engine</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS & PERFORMANCE -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="badge badge-blue"><i class="fa-solid fa-chart-bar"></i> Experimental Results</div>
+      <h2>Model <span class="grad-text">Performance Results</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid-2 fade-in">
+      <div class="card">
+        <h3 style="margin-bottom:1.2rem;">Stutter-Type Classifier (Random Forest)</h3>
+        <div style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+            <thead>
+              <tr style="background:var(--bg-muted);">
+                <th style="padding:0.6rem 0.8rem; text-align:left; border-radius:8px 0 0 8px;">Stutter Type</th>
+                <th style="padding:0.6rem 0.8rem; text-align:center;">Precision</th>
+                <th style="padding:0.6rem 0.8rem; text-align:center;">Recall</th>
+                <th style="padding:0.6rem 0.8rem; text-align:center; border-radius:0 8px 8px 0;">F1-Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.6rem 0.8rem;">Part-word Repetition</td><td style="text-align:center;">0.98</td><td style="text-align:center;">0.98</td><td style="text-align:center; color:var(--accent); font-weight:600;">0.98</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.6rem 0.8rem;">Prolongation</td><td style="text-align:center;">0.99</td><td style="text-align:center;">0.98</td><td style="text-align:center; color:var(--accent); font-weight:600;">0.99</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.6rem 0.8rem;">Block</td><td style="text-align:center;">0.99</td><td style="text-align:center;">0.99</td><td style="text-align:center; color:var(--accent); font-weight:600;">0.99</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.6rem 0.8rem;">Whole-word Repetition</td><td style="text-align:center;">0.95</td><td style="text-align:center;">0.98</td><td style="text-align:center; color:var(--accent); font-weight:600;">0.97</td></tr>
+              <tr style="background:var(--bg-muted); font-weight:700;"><td style="padding:0.6rem 0.8rem; border-radius:8px 0 0 8px;">Overall (Macro Avg.)</td><td style="text-align:center;">0.98</td><td style="text-align:center;">0.98</td><td style="text-align:center; color:var(--primary); border-radius:0 8px 8px 0;">0.98</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:1rem;">
+          <strong>Overall Accuracy: 98.34%</strong> — Substantially exceeds the 85% design target.
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:1.2rem;">Comparison with Baseline Methods</h3>
+        <div style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+            <thead>
+              <tr style="background:var(--bg-muted);">
+                <th style="padding:0.6rem 0.8rem; text-align:left; border-radius:8px 0 0 8px;">Method</th>
+                <th style="padding:0.6rem 0.8rem; text-align:center;">Accuracy</th>
+                <th style="padding:0.6rem 0.8rem; text-align:center; border-radius:0 8px 8px 0;">F1-Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.6rem 0.8rem;">SVM + MFCC Features</td><td style="text-align:center;">72–76%</td><td style="text-align:center;">0.70–0.74</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.6rem 0.8rem;">CNN on Log-Mel Spectrogram</td><td style="text-align:center;">78–82%</td><td style="text-align:center;">0.76–0.80</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.6rem 0.8rem;">Wav2Vec2-Base (English only)</td><td style="text-align:center;">84–86%</td><td style="text-align:center;">0.83–0.85</td></tr>
+              <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.6rem 0.8rem;">CNN + ConvLSTM</td><td style="text-align:center;">85–88%</td><td style="text-align:center;">0.84–0.87</td></tr>
+              <tr style="background:rgba(108,63,232,0.08); font-weight:700;"><td style="padding:0.6rem 0.8rem; border-radius:8px 0 0 8px; color:var(--primary);">✦ Ours: Wav2Vec2 XLS-R 300M</td><td style="text-align:center; color:var(--primary);">88.18%</td><td style="text-align:center; color:var(--primary); border-radius:0 8px 8px 0;">0.891</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top:1rem;">
+          <strong>Bilingual advantage:</strong> Our model simultaneously supports Sinhala — the first validated solution for Sri Lanka.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 <strong style="color:white;">Vocal Path</strong> · Group 25-26J 383 · Sri Lanka Institute of Information Technology (SLIIT)</p>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

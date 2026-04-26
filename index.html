@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocal Path — AI Speech Therapy for Stuttering</title>
+    <meta name="description"
+        content="Vocal Path: A Cloud-Enabled Intelligent System for Adaptive Speech Therapy in Stuttering. Group 25-26J 383, SLIIT.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ── HERO SPLIT ── */
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #EDE9FE 0%, #DBEAFE 55%, #E0F2FE 100%);
+            display: flex;
+            align-items: center;
+            padding-top: var(--nav-height);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(108, 63, 232, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero-img-wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-img-wrap img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            box-shadow: 0 24px 60px rgba(108, 63, 232, 0.22);
+            object-fit: cover;
+            animation: floatImg 6s ease-in-out infinite;
+        }
+
+        .hero-img-wrap::after {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 36px;
+            background: linear-gradient(135deg, #6C3FE8, #0EA5E9);
+            opacity: 0.1;
+            z-index: -1;
+            filter: blur(40px);
+        }
+
+        @keyframes floatImg {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 0;
+            margin-top: 2.8rem;
+            background: #fff;
+            border: 1px solid #E0E7FF;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(108, 63, 232, 0.09);
+            overflow: hidden;
+        }
+
+        .stat-cell {
+            flex: 1;
+            text-align: center;
+            padding: 1.2rem 0.8rem;
+            border-right: 1px solid #E0E7FF;
+        }
+
+        .stat-cell:last-child {
+            border-right: none;
+        }
+
+        .stat-val {
+            font-size: 1.9rem;
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, #6C3FE8, #0EA5E9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-lbl {
+            font-size: 0.75rem;
+            color: #6B7280;
+            margin-top: 0.25rem;
+        }
+
+        /* ── IMG SPLIT SECTIONS ── */
+        .img-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .img-split.flip {}
+
+        .img-split .split-img img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(108, 63, 232, 0.14);
+            object-fit: cover;
+            aspect-ratio: 4/3;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .img-split .split-img img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 60px rgba(108, 63, 232, 0.22);
+        }
+
+        /* ── BANNER ── */
+        .section-banner {
+            width: 100%;
+            border-radius: 20px;
+            height: 320px;
+            object-fit: cover;
+            box-shadow: 0 12px 40px rgba(108, 63, 232, 0.14);
+            display: block;
+        }
+
+        @media(max-width:860px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-img-wrap {
+                display: none;
+            }
+
+            .img-split {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/AppLogo1.png" alt="Vocal Path Logo" class="logo-icon" style="background: white; object-fit: contain; padding: 2px;">
+                Vocal<span>Path</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="domain.html">Domain</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="presentations.html">Presentations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ══ HERO ══ -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-inner fade-in">
+
+                <!-- LEFT: text -->
+                <div class="hero-text">
+                    <div class="badge badge-primary"><i class="fa-solid fa-brain"></i> AI-Powered Research · SLIIT
+                        2025/26J 383</div>
+                    <h1 style="margin-top:0.8rem;">Adaptive Speech<br>Therapy for <span class="grad-text">Children Who
+                            Stutter</span></h1>
+                    <p style="font-size:1.1rem; max-width:520px; margin:1.2rem 0 2rem; color:#4B5563;">
+                        A cloud-enabled, bilingual AI platform that detects stuttering, delivers personalized exercises,
+                        and tracks therapy progress for children aged 5–10 — in English and Sinhala.
+                    </p>
+                    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                        <a href="domain.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Explore
+                            Research</a>
+                        <a href="about.html" class="btn btn-outline"><i class="fa-solid fa-users"></i> Meet The Team</a>
+                    </div>
+
+                    <!-- STATS BAR -->
+                    <div class="stats-bar">
+                        <div class="stat-cell">
+                            <div class="stat-val">88.18%</div>
+                            <div class="stat-lbl">Stuttering Detection<br>(Wav2Vec2)</div>
+                        </div>
+                        <div class="stat-cell">
+                            <div class="stat-val">98.34%</div>
+                            <div class="stat-lbl">Stutter-Type<br>(Random Forest)</div>
+                        </div>
+                        <div class="stat-cell">
+                            <div class="stat-val">89.75%</div>
+                            <div class="stat-lbl">SVM Fluency<br>Classifier</div>
+                        </div>
+                        <div class="stat-cell">
+                            <div class="stat-val">4</div>
+                            <div class="stat-lbl">Integrated AI<br>Components</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: hero image -->
+                <div class="hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=700&q=85&auto=format&fit=crop"
+                        alt="Child speech therapy session" loading="eager">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ WHAT IS VOCAL PATH ══ -->
+    <section style="background:#fff; padding:5rem 0;">
+        <div class="container">
+            <div class="img-split fade-in">
+                <!-- text -->
+                <div>
+                    <div class="badge badge-green"><i class="fa-solid fa-lightbulb"></i> Project Overview</div>
+                    <h2 style="text-align:left; margin-top:0.6rem;">What is <span class="grad-text">Vocal Path?</span>
+                    </h2>
+                    <div class="divider" style="margin:1rem 0;"></div>
+                    <p>A mobile ecosystem that automates stuttering detection and delivers clinician-grade, personalised
+                        speech therapy — accessible from anywhere in Sri Lanka.</p>
+
+                    <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem;">
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div class="card-icon card-icon-rose" style="margin:0;min-width:48px;"><i
+                                    class="fa-solid fa-child-reaching"></i></div>
+                            <div>
+                                <strong style="color:#1E1B4B;">The Problem</strong>
+                                <p style="margin:0.3rem 0 0;font-size:0.92rem;">Diagnosis depends on manual SLP
+                                    observation — slow, subjective, and inaccessible for rural children in Sri Lanka. No
+                                    validated Sinhala stuttering model exists.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div class="card-icon card-icon-green" style="margin:0;min-width:48px;"><i
+                                    class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <strong style="color:#1E1B4B;">Our Solution</strong>
+                                <p style="margin:0.3rem 0 0;font-size:0.92rem;">Cloud-based bilingual AI that detects
+                                    stuttering from audio, recommends adaptive exercises, and tracks long-term therapy
+                                    progress — no camera required.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div class="card-icon card-icon-blue" style="margin:0;min-width:48px;"><i
+                                    class="fa-solid fa-globe-asia"></i></div>
+                            <div>
+                                <strong style="color:#1E1B4B;">Who It Helps</strong>
+                                <p style="margin:0.3rem 0 0;font-size:0.92rem;">Children aged 5–10, parents monitoring
+                                    progress at home, and Speech-Language Therapists needing data-driven patient
+                                    insights.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- image -->
+                <div class="split-img">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=85&auto=format&fit=crop"
+                        alt="Children learning and education">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ 4 AI COMPONENTS ══ -->
+    <section style="padding:5rem 0;">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="badge badge-primary"><i class="fa-solid fa-cubes"></i> System Architecture</div>
+                <h2>Four Integrated <span class="grad-text">AI Components</span></h2>
+                <div class="divider"></div>
+                <p>Each component independently addresses a critical clinical gap and works together as a seamless
+                    therapy platform.</p>
+            </div>
+
+            <div class="grid-2 fade-in">
+                <div class="card">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+                        <div class="card-icon card-icon-purple" style="margin:0;"><i
+                                class="fa-solid fa-waveform-lines"></i></div>
+                        <div><span class="tag">Component 1 · IT22565044</span>
+                            <h3 style="margin:4px 0 0;">Stuttering Detector</h3>
+                        </div>
+                    </div>
+                    <p>Bilingual binary classifier on <strong>Wav2Vec2 XLS-R 300M</strong> detecting stuttering from raw
+                        audio in English & Sinhala. Achieves <strong>88.18% accuracy</strong>, F1 0.891. Downstream
+                        Random Forest stutter-type classifier: <strong>98.34%</strong>.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.8rem;">
+                        <span class="tag">Wav2Vec2 XLS-R</span><span class="tag">MFCCs + Pitch</span><span
+                            class="tag">Bilingual</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+                        <div class="card-icon card-icon-blue" style="margin:0;"><i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <div><span class="tag">Component 2 · IT22590862</span>
+                            <h3 style="margin:4px 0 0;">Exercise Recommender</h3>
+                        </div>
+                    </div>
+                    <p>Hybrid rule-based + <strong>KNN ML recommender</strong> classifying severity
+                        (mild/moderate/severe). Dynamically adjusts exercise difficulty from historical performance,
+                        simulating clinician-guided therapy.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.8rem;">
+                        <span class="tag">KNN Algorithm</span><span class="tag">Adaptive Difficulty</span><span
+                            class="tag">Cloud-Based</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+                        <div class="card-icon card-icon-green" style="margin:0;"><i
+                                class="fa-solid fa-comment-dots"></i></div>
+                        <div><span class="tag">Component 3 · IT22563064</span>
+                            <h3 style="margin:4px 0 0;">Pronunciation Feedback</h3>
+                        </div>
+                    </div>
+                    <p>Dual-fallback ASR (<strong>Whisper + Google Cloud STT</strong>) with IPA phoneme alignment and
+                        Levenshtein distance. SVM fluency classifier: <strong>89.75% accuracy</strong>. Sub-300ms
+                        corrective feedback.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.8rem;">
+                        <span class="tag">Whisper ASR</span><span class="tag">SVM 89.75%</span><span class="tag">en-US +
+                            si-LK</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+                        <div class="card-icon card-icon-amber" style="margin:0;"><i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div><span class="tag">Component 4 · IT22273758</span>
+                            <h3 style="margin:4px 0 0;">Progress Dashboard</h3>
+                        </div>
+                    </div>
+                    <p><strong>LSTM time-series model</strong> forecasts fluency improvement across sessions. Deployed
+                        as a RESTful Flask service, visualised in a Flutter dashboard for children, parents, and
+                        clinicians.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.8rem;">
+                        <span class="tag">LSTM</span><span class="tag">Real-Time Forecast</span><span
+                            class="tag">Firebase + Flutter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ IMPACT / IMAGE SECTION ══ -->
+    <section style="background:#fff; padding:5rem 0;">
+        <div class="container">
+            <div class="img-split flip fade-in" style="direction:rtl;">
+                <!-- image -->
+                <div class="split-img" style="direction:ltr;">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&q=85&auto=format&fit=crop"
+                        alt="AI and healthcare technology">
+                </div>
+                <!-- text -->
+                <div style="direction:ltr;">
+                    <div class="badge badge-blue"><i class="fa-solid fa-star"></i> Why Vocal Path?</div>
+                    <h2 style="text-align:left;margin-top:0.6rem;">Unique <span class="grad-text">Value
+                            Propositions</span></h2>
+                    <div class="divider" style="margin:1rem 0;"></div>
+                    <div style="display:flex;flex-direction:column;gap:0.9rem;margin-top:0.5rem;">
+                        <div style="display:flex;gap:0.8rem;align-items:center;">
+                            <div
+                                style="width:36px;height:36px;min-width:36px;border-radius:10px;background:#EDE9FE;color:#6C3FE8;display:flex;align-items:center;justify-content:center;font-size:1rem;">
+                                <i class="fa-solid fa-language"></i></div>
+                            <div><strong style="color:#1E1B4B;">First bilingual Sinhala–English stuttering AI</strong>
+                                <p style="margin:0;font-size:0.88rem;">No validated Sinhala model existed before Vocal
+                                    Path.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:0.8rem;align-items:center;">
+                            <div
+                                style="width:36px;height:36px;min-width:36px;border-radius:10px;background:#DBEAFE;color:#0EA5E9;display:flex;align-items:center;justify-content:center;font-size:1rem;">
+                                <i class="fa-solid fa-microphone"></i></div>
+                            <div><strong style="color:#1E1B4B;">Audio-only — no camera required</strong>
+                                <p style="margin:0;font-size:0.88rem;">Privacy-preserving, home-friendly therapy for all
+                                    children.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:0.8rem;align-items:center;">
+                            <div
+                                style="width:36px;height:36px;min-width:36px;border-radius:10px;background:#D1FAE5;color:#10B981;display:flex;align-items:center;justify-content:center;font-size:1rem;">
+                                <i class="fa-solid fa-sliders"></i></div>
+                            <div><strong style="color:#1E1B4B;">Adaptive personalised therapy</strong>
+                                <p style="margin:0;font-size:0.88rem;">ML recommender continuously adjusts to individual
+                                    progress.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:0.8rem;align-items:center;">
+                            <div
+                                style="width:36px;height:36px;min-width:36px;border-radius:10px;background:#FEE2E2;color:#F43F5E;display:flex;align-items:center;justify-content:center;font-size:1rem;">
+                                <i class="fa-solid fa-bolt"></i></div>
+                            <div><strong style="color:#1E1B4B;">Sub-300ms pronunciation feedback</strong>
+                                <p style="margin:0;font-size:0.88rem;">Consistent with motor learning research for
+                                    maximum effect.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:0.8rem;align-items:center;">
+                            <div
+                                style="width:36px;height:36px;min-width:36px;border-radius:10px;background:#FEF3C7;color:#F59E0B;display:flex;align-items:center;justify-content:center;font-size:1rem;">
+                                <i class="fa-solid fa-chart-mixed"></i></div>
+                            <div><strong style="color:#1E1B4B;">LSTM predictive progress analytics</strong>
+                                <p style="margin:0;font-size:0.88rem;">Forecasts fluency improvement for data-driven
+                                    planning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ TECH STACK ══ -->
+    <section style="padding:5rem 0;">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="badge badge-primary"><i class="fa-solid fa-microchip"></i> Technology Stack</div>
+                <h2>Built with <span class="grad-text">Modern AI Technologies</span></h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Banner image -->
+            <div class="fade-in" style="margin-bottom:2.5rem;">
+                <img
+        src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80&auto=format&fit=crop"
+        alt="AI and machine learning technology"
+        style="width:100%;border-radius:20px;height:280px;object-fit:cover;box-shadow:0 12px 40px rgba(108,63,232,0.14);"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80&auto=format&fit=crop';"
+      >      </div>
+
+            <div class="grid-4 fade-in">
+                <div class="card" style="text-align:center;padding:1.4rem;">
+                    <div style="font-size:2rem;margin-bottom:0.6rem;">🤗</div>
+                    <h4>Wav2Vec2 XLS-R 300M</h4>
+                    <p style="font-size:0.82rem;">Cross-lingual transformer for bilingual stuttering detection</p>
+                </div>
+                <div class="card" style="text-align:center;padding:1.4rem;">
+                    <div style="font-size:2rem;margin-bottom:0.6rem;">🎤</div>
+                    <h4>Whisper + Google STT</h4>
+                    <p style="font-size:0.82rem;">Dual ASR fallback for robust Sinhala & English recognition</p>
+                </div>
+                <div class="card" style="text-align:center;padding:1.4rem;">
+                    <div style="font-size:2rem;margin-bottom:0.6rem;">🔥</div>
+                    <h4>Firebase Firestore</h4>
+                    <p style="font-size:0.82rem;">Cloud-based session storage and real-time data syncing</p>
+                </div>
+                <div class="card" style="text-align:center;padding:1.4rem;">
+                    <div style="font-size:2rem;margin-bottom:0.6rem;">📱</div>
+                    <h4>Flutter Mobile App</h4>
+                    <p style="font-size:0.82rem;">Cross-platform frontend for children, parents & clinicians</p>
+                </div>
+                <div class="card" style="text-align:center;padding:1.4rem;">
+                    <div style="font-size:2rem;margin-bottom:0.6rem;">🐍</div>
+                    <h4>Flask Microservices</h4>
+                    <p style="font-size:0.82rem;">RESTful backend APIs for real-time ML inference</p>
+                </div>
+                <div class="card" style="text-align:center;padding:1.4rem;">
+                    <div style="font-size:2rem;margin-bottom:0.6rem;">🧠</div>
+                    <h4>LSTM + Random Forest</h4>
+                    <p style="font-size:0.82rem;">Progress forecasting & stutter-type classification</p>
+                </div>
+                <div class="card" style="text-align:center;padding:1.4rem;">
+                    <div style="font-size:2rem;margin-bottom:0.6rem;">📊</div>
+                    <h4>SVM + KNN</h4>
+                    <p style="font-size:0.82rem;">Fluency scoring (89.75%) & exercise recommendation</p>
+                </div>
+                <div class="card" style="text-align:center;padding:1.4rem;">
+                    <div style="font-size:2rem;margin-bottom:0.6rem;">🎵</div>
+                    <h4>librosa + MFCCs</h4>
+                    <p style="font-size:0.82rem;">~420-dim acoustic feature extraction per recording</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ COMMERCIALIZATION STRIP ══ -->
+    <section style="background:#fff;padding:5rem 0;">
+        <div class="container fade-in">
+            <div class="img-split">
+                <div>
+                    <div class="badge badge-green"><i class="fa-solid fa-rocket"></i> Commercialization</div>
+                    <h2 style="text-align:left;margin-top:0.6rem;">Market Potential & <span
+                            class="grad-text">Sustainability</span></h2>
+                    <div class="divider" style="margin:1rem 0;"></div>
+                    <p>The global assistive technology market, worth <strong>USD 16.5 billion in 2024</strong>, is
+                        projected to exceed <strong>USD 25 billion by 2030</strong>, driven by AI-based health
+                        innovations.</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;">
+                        <div class="card" style="padding:1.2rem;text-align:center;">
+                            <div style="font-size:1.6rem;font-weight:800;color:#6C3FE8;">USD 25B+</div>
+                            <p style="font-size:0.82rem;margin:0;">Global Assistive Tech<br>Market by 2030</p>
+                        </div>
+                        <div class="card" style="padding:1.2rem;text-align:center;">
+                            <div style="font-size:1.6rem;font-weight:800;color:#10B981;">5–8%</div>
+                            <p style="font-size:0.82rem;margin:0;">Children Affected by<br>Stuttering Globally</p>
+                        </div>
+                    </div>
+                    <div
+                        style="margin-top:1rem;padding:1rem 1.2rem;background:#EDE9FE;border-radius:12px;border-left:4px solid #6C3FE8;">
+                        <strong style="color:#1E1B4B;">Revenue Model:</strong>
+                        <p style="font-size:0.88rem;margin:0.3rem 0 0;">Freemium (basic free, advanced via subscription)
+                            + Partnerships with NGOs, schools & rehabilitation centres.</p>
+                    </div>
+                </div>
+                <div class="split-img">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=85&auto=format&fit=crop"
+                        alt="Data analytics and market growth">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ CTA ══ -->
+    <section style="padding:4rem 0;">
+        <div class="container fade-in">
+            <div class="cta-block">
+                <h2>Explore the Full Research</h2>
+                <p style="font-size:1.05rem;margin:0.8rem 0 2rem;">Dive into the domain analysis, methodology, and
+                    experimental results behind Vocal Path.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="domain.html" class="btn btn-white"><i class="fa-solid fa-book-open"></i> View Domain</a>
+                    <a href="documents.html" class="btn"
+                        style="background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.4);"><i
+                            class="fa-solid fa-file-pdf"></i> Research Paper</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 <strong style="color:white;">Vocal Path</strong> · Group 25-26J 383 · Sri Lanka Institute of
+                Information Technology (SLIIT)</p>
+            <p style="margin-top:0.4rem;font-size:0.82rem;">B.Sc. (Hons) Degree in Information Technology · Department
+                of Information Technology</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+        });
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    </script>
+</body>
+
+</html>

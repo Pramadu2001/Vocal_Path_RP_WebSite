@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .page-hero-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;}
+    .page-hero-wrap img{width:100%;border-radius:18px;box-shadow:0 12px 40px rgba(108,63,232,0.16);object-fit:cover;aspect-ratio:16/9;}
+    @media(max-width:760px){.page-hero-wrap{grid-template-columns:1fr;}.page-hero-wrap img{display:none;}}
+  </style>
+  <title>Presentations — Vocal Path</title>
+  <meta name="description" content="Presentation slides for all Vocal Path research presentations.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/AppLogo1.png" alt="Vocal Path Logo" class="logo-icon" style="background: white; object-fit: contain; padding: 2px;">
+      Vocal<span>Path</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="domain.html">Domain</a></li>
+      <li><a href="milestones.html">Milestones</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="presentations.html" class="active">Presentations</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background: var(--grad-hero); padding: 7rem 0 3.5rem; border-bottom: 1px solid var(--border);">
+  <div class="container fade-in">
+    <div class="page-hero-wrap">
+      <div>
+        <div class="badge badge-primary"><i class="fa-solid fa-person-chalkboard"></i> Slides</div>
+        <h1 style="margin-top:0.6rem;">Presentation <span class="grad-text">Slides</span></h1>
+        <p style="font-size:1.05rem;max-width:520px;margin-top:0.8rem;">Download and view all slides from past and upcoming presentations. Slides are uploaded within 48 hours of each evaluation session.</p>
+        <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <span class="tag"><i class="fa-solid fa-circle-check"></i> 3 Completed</span>
+          <span class="tag"><i class="fa-solid fa-clock"></i> 2 Upcoming</span>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=700&q=80&auto=format&fit=crop" alt="Academic presentation" loading="eager">
+    </div>
+  </div>
+</div>
+
+<main>
+<section>
+  <div class="container fade-in">
+    <div class="grid-2" style="align-items:start; gap:2rem;">
+
+      <!-- COMPLETED -->
+      <div>
+        <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:1.5rem;">
+          <div style="width:36px; height:36px; border-radius:10px; background:rgba(16,185,129,0.12); color:var(--accent); display:flex; align-items:center; justify-content:center;">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h3 style="margin:0;">Completed Presentations</h3>
+        </div>
+
+        <a href="Documents/Proposal Presentation Stuttering.pdf" class="doc-item" target="_blank">
+          <div class="doc-item-icon" style="background:rgba(108,63,232,0.12); color:var(--primary);">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div class="doc-info">
+            <strong>Proposal Presentation</strong>
+            <span>Initial project pitch &amp; research gap validation</span>
+          </div>
+          <i class="fa-solid fa-arrow-down-to-bracket" style="color:var(--primary); margin-left:auto;"></i>
+        </a>
+
+        <a href="Documents/pp1_Presentation_25-26J 383.pdf" class="doc-item" target="_blank">
+          <div class="doc-item-icon" style="background:rgba(244,63,94,0.12); color:var(--rose);">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div class="doc-info">
+            <strong>Progress Presentation 1</strong>
+            <span>Initial architecture, prototype preview &amp; commercialization strategy</span>
+          </div>
+          <i class="fa-solid fa-arrow-down-to-bracket" style="color:var(--primary); margin-left:auto;"></i>
+        </a>
+
+        <a href="Documents/Progress Presentation 2.pptx" class="doc-item" target="_blank">
+          <div class="doc-item-icon" style="background:rgba(245,158,11,0.12); color:var(--amber);">
+            <i class="fa-solid fa-file-powerpoint"></i>
+          </div>
+          <div class="doc-info">
+            <strong>Progress Presentation 2</strong>
+            <span>ML models, accuracy results & individual component demos — April 2026</span>
+          </div>
+          <i class="fa-solid fa-arrow-down-to-bracket" style="color:var(--primary); margin-left:auto;"></i>
+        </a>
+
+        <!-- PP2 Breakdown -->
+        <div class="card" style="margin-top:1.5rem;">
+          <h4 style="margin-bottom:1rem; color:var(--text-primary);">
+            <i class="fa-solid fa-list" style="color:var(--primary); margin-right:8px;"></i>
+            PP2 Covered Topics
+          </h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.88rem; color:var(--text-muted);">
+            <li><i class="fa-solid fa-chevron-right" style="color:var(--primary); margin-right:6px;"></i>Problem statement & stakeholder analysis</li>
+            <li><i class="fa-solid fa-chevron-right" style="color:var(--primary); margin-right:6px;"></i>Wav2Vec2 XLS-R stuttering detection (88.18%)</li>
+            <li><i class="fa-solid fa-chevron-right" style="color:var(--primary); margin-right:6px;"></i>Random Forest stutter-type classifier (98.34%)</li>
+            <li><i class="fa-solid fa-chevron-right" style="color:var(--primary); margin-right:6px;"></i>Adaptive KNN exercise recommender with severity levels</li>
+            <li><i class="fa-solid fa-chevron-right" style="color:var(--primary); margin-right:6px;"></i>Dual-ASR pronunciation feedback (SVM 89.75%)</li>
+            <li><i class="fa-solid fa-chevron-right" style="color:var(--primary); margin-right:6px;"></i>LSTM progress prediction dashboard</li>
+            <li><i class="fa-solid fa-chevron-right" style="color:var(--primary); margin-right:6px;"></i>Commercialization: freemium model + NGO partnerships</li>
+            <li><i class="fa-solid fa-chevron-right" style="color:var(--primary); margin-right:6px;"></i>USD 16.5B assistive tech market potential by 2030</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- UPCOMING -->
+      <div>
+        <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:1.5rem;">
+          <div style="width:36px; height:36px; border-radius:10px; background:rgba(14,165,233,0.12); color:var(--secondary); display:flex; align-items:center; justify-content:center;">
+            <i class="fa-solid fa-calendar-plus"></i>
+          </div>
+          <h3 style="margin:0;">Upcoming Presentations</h3>
+        </div>
+
+
+        <div class="doc-item pending">
+          <div class="doc-item-icon" style="background:rgba(244,63,94,0.12); color:var(--rose);">
+            <i class="fa-solid fa-file-powerpoint"></i>
+          </div>
+          <div class="doc-info">
+            <strong>Final Presentation</strong>
+            <span>Full system demonstration at Lady Ridgeway Hospital — October 2026</span>
+          </div>
+          <i class="fa-solid fa-lock" style="color:var(--secondary); margin-left:auto;"></i>
+        </div>
+
+        <!-- What's coming -->
+        <div class="card" style="margin-top:1.5rem; border-left:4px solid var(--primary);">
+          <h4 style="color:var(--text-primary); margin-bottom:0.8rem;"><i class="fa-solid fa-rocket" style="color:var(--primary); margin-right:8px;"></i>Final Presentation Will Cover</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.88rem; color:var(--text-muted);">
+            <li>• Complete end-to-end system integration demo</li>
+            <li>• Clinical evaluation results (50–80 children)</li>
+            <li>• Per-language stratified accuracy analysis</li>
+            <li>• Longitudinal therapy outcome measurements</li>
+            <li>• Formal SLP validation of detection models</li>
+            <li>• Commercial go-to-market strategy</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:1rem; background:var(--bg-muted);">
+          <p style="font-size:0.88rem; margin:0; color:var(--text-muted);">
+            <i class="fa-solid fa-circle-info" style="color:var(--secondary); margin-right:6px;"></i>
+            New slides are uploaded here within <strong>48 hours</strong> of each evaluation session. Subscribe to stay updated.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 <strong style="color:white;">Vocal Path</strong> · Group 25-26J 383 · Sri Lanka Institute of Information Technology (SLIIT)</p>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
+

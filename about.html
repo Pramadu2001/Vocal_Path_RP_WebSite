@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .page-hero-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;}
+    .page-hero-wrap img{width:100%;border-radius:18px;box-shadow:0 12px 40px rgba(108,63,232,0.16);object-fit:cover;aspect-ratio:16/9;}
+    @media(max-width:760px){.page-hero-wrap{grid-template-columns:1fr;}.page-hero-wrap img{display:none;}}
+    /* Member photo avatars */
+    .member-photo {
+      width: 90px; height: 90px; min-width: 90px;
+      border-radius: 50%;
+      object-fit: cover; object-position: top center;
+      border: 4px solid white;
+      box-shadow: 0 0 0 3px #6C3FE8, 0 8px 24px rgba(108,63,232,0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+    }
+    .member-photo:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 4px #0EA5E9, 0 12px 32px rgba(108,63,232,0.35);
+    }
+  </style>
+  <title>About Us — Vocal Path Research Team</title>
+  <meta name="description" content="Meet the Vocal Path research team — Group 25-26J 383, SLIIT.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/AppLogo1.png" alt="Vocal Path Logo" class="logo-icon" style="background: white; object-fit: contain; padding: 2px;">
+      Vocal<span>Path</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="domain.html">Domain</a></li>
+      <li><a href="milestones.html">Milestones</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="presentations.html">Presentations</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background: var(--grad-hero); padding: 7rem 0 3.5rem; border-bottom: 1px solid var(--border);">
+  <div class="container fade-in">
+    <div class="page-hero-wrap">
+      <div>
+        <div class="badge badge-primary"><i class="fa-solid fa-users"></i> The Team</div>
+        <h1 style="margin-top:0.6rem;">Meet the <span class="grad-text">Research Team</span></h1>
+        <p style="font-size:1.05rem;max-width:520px;margin-top:0.8rem;">We are Group 25-26J 383 from SLIIT, passionate about bridging AI and healthcare for Sri Lankan children.</p>
+        <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <span class="tag"><i class="fa-solid fa-user-group"></i> 4 Researchers</span>
+          <span class="tag"><i class="fa-solid fa-graduation-cap"></i> SLIIT, Malabe</span>
+          <span class="tag"><i class="fa-solid fa-flask"></i> B.Sc. (Hons) IT</span>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80&auto=format&fit=crop" alt="Research team collaboration" loading="eager">
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- PROJECT CONTEXT -->
+<section style="background:var(--bg-white);">
+  <div class="container fade-in">
+    <div class="card" style="background: linear-gradient(135deg, #EDE9FE, #DBEAFE); border:none; text-align:center; padding:3rem;">
+      <div style="font-size:3rem; margin-bottom:1rem;">🎓</div>
+      <h2 style="margin-bottom:0.5rem;">B.Sc. (Hons) Degree in Information Technology</h2>
+      <p>Specializing in Information Technology · Department of Information Technology<br>Sri Lanka Institute of Information Technology · Malabe, Sri Lanka</p>
+      <div style="display:flex; justify-content:center; gap:2rem; margin-top:1.5rem; flex-wrap:wrap;">
+        <div><div class="stat-number">4</div><p style="font-size:0.85rem;">Research Members</p></div>
+        <div><div class="stat-number">3</div><p style="font-size:0.85rem;">Supervisors</p></div>
+        <div><div class="stat-number">4</div><p style="font-size:0.85rem;">AI Components</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH MEMBERS -->
+<section>
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="badge badge-primary"><i class="fa-solid fa-code"></i> Research Members</div>
+      <h2>The <span class="grad-text">Developer Team</span></h2>
+      <div class="divider"></div>
+      <p>Each member leads a critical AI component of the Vocal Path platform.</p>
+    </div>
+
+    <div class="grid-2 fade-in">
+
+      <!-- Chithakshana -->
+      <div class="card" style="display:flex; gap:1.5rem; align-items:flex-start;">
+        <img src="images/member_chithakshana.png" alt="K.P.S. Chithakshana" class="member-photo">
+        <div style="flex:1;">
+          <h3 style="margin-bottom:0.2rem;">K.P.S. Chithakshana</h3>
+          <span class="team-role"><i class="fa-solid fa-microchip" style="margin-right:4px;"></i>Component 1 Lead — Stuttering Detector</span>
+          <p class="team-id">IT22565044</p>
+          <p style="font-size:0.88rem; margin:0.6rem 0; color:var(--text-muted);">Developed the Wav2Vec2 XLS-R 300M bilingual stuttering binary classifier and the Random Forest stutter-type classifier achieving 98.34% accuracy across 4 disfluency classes.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-bottom:0.6rem;">
+            <span class="tag">Wav2Vec2</span><span class="tag">Random Forest</span><span class="tag">88.18% Acc</span>
+          </div>
+          <div class="team-email"><a href="mailto:IT22565044@my.sliit.lk"><i class="fa-regular fa-envelope" style="margin-right:5px;"></i>IT22565044@my.sliit.lk</a></div>
+        </div>
+      </div>
+
+      <!-- Serasinghe -->
+      <div class="card" style="display:flex; gap:1.5rem; align-items:flex-start;">
+        <img src="images/member_serasinghe.png" alt="S.M.C.N. Serasinghe" class="member-photo">
+        <div style="flex:1;">
+          <h3 style="margin-bottom:0.2rem;">S.M.C.N. Serasinghe</h3>
+          <span class="team-role"><i class="fa-solid fa-dumbbell" style="margin-right:4px;"></i>Component 2 Lead — Exercise Recommender</span>
+          <p class="team-id">IT22590862</p>
+          <p style="font-size:0.88rem; margin:0.6rem 0; color:var(--text-muted);">Built the personalized exercise recommender using a hybrid rule-based and KNN ML architecture. Classifies users into mild, moderate, and severe levels. Dynamically adjusts therapy difficulty based on historical performance.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-bottom:0.6rem;">
+            <span class="tag">KNN</span><span class="tag">Adaptive Therapy</span><span class="tag">Cloud-Based</span>
+          </div>
+          <div class="team-email"><a href="mailto:IT22590862@my.sliit.lk"><i class="fa-regular fa-envelope" style="margin-right:5px;"></i>IT22590862@my.sliit.lk</a></div>
+        </div>
+      </div>
+
+      <!-- Rathninda -->
+      <div class="card" style="display:flex; gap:1.5rem; align-items:flex-start;">
+        <img src="images/member_rathninda.png" alt="R.G.S.N.C. Rathninda" class="member-photo">
+        <div style="flex:1;">
+          <h3 style="margin-bottom:0.2rem;">R.G.S.N.C. Rathninda</h3>
+          <span class="team-role"><i class="fa-solid fa-comment-dots" style="margin-right:4px;"></i>Component 3 Lead — Pronunciation Feedback</span>
+          <p class="team-id">IT22563064</p>
+          <p style="font-size:0.88rem; margin:0.6rem 0; color:var(--text-muted);">Engineered the ASR-powered pronunciation feedback system using a dual-fallback architecture (Whisper + Google Cloud STT). Delivers phoneme-level corrective feedback in under 300ms. SVM fluency classifier: 89.75% accuracy.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-bottom:0.6rem;">
+            <span class="tag">Whisper ASR</span><span class="tag">SVM</span><span class="tag">IPA Phoneme</span>
+          </div>
+          <div class="team-email"><a href="mailto:IT22563064@my.sliit.lk"><i class="fa-regular fa-envelope" style="margin-right:5px;"></i>IT22563064@my.sliit.lk</a></div>
+        </div>
+      </div>
+
+      <!-- Fernando -->
+      <div class="card" style="display:flex; gap:1.5rem; align-items:flex-start;">
+        <img src="images/member_fernando.png" alt="Fernando K.A.I." class="member-photo">
+        <div style="flex:1;">
+          <h3 style="margin-bottom:0.2rem;">Fernando K.A.I.</h3>
+          <span class="team-role"><i class="fa-solid fa-chart-line" style="margin-right:4px;"></i>Component 4 Lead — Progress Prediction</span>
+          <p class="team-id">IT22273758</p>
+          <p style="font-size:0.88rem; margin:0.6rem 0; color:var(--text-muted);">Designed the ML-based stuttering progress prediction system using a time-series LSTM architecture. Deployed as a RESTful Flask service integrated with the Flutter mobile dashboard for real-time forecasting.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:0.3rem; margin-bottom:0.6rem;">
+            <span class="tag">LSTM</span><span class="tag">Flask API</span><span class="tag">Flutter Dashboard</span>
+          </div>
+          <div class="team-email"><a href="mailto:IT22273758@my.sliit.lk"><i class="fa-regular fa-envelope" style="margin-right:5px;"></i>IT22273758@my.sliit.lk</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SUPERVISORS -->
+<section style="background: var(--bg-white);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="badge badge-blue"><i class="fa-solid fa-user-tie"></i> Academic Supervisors</div>
+      <h2>Project <span class="grad-text">Supervisors</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid-3 fade-in">
+
+      <div class="team-card">
+        <div class="team-avatar" style="background: linear-gradient(135deg, #6C3FE8, #0EA5E9); font-size:2rem;">
+          <i class="fa-solid fa-user-graduate"></i>
+        </div>
+        <h3>Prof. Samantha Thelijjagoda</h3>
+        <span class="team-role">Internal Supervisor</span>
+        <p style="font-size:0.88rem; margin:0.5rem 0; color:var(--text-muted);">Department of Information Systems Engineering<br>SLIIT, Malabe, Sri Lanka</p>
+        <div class="team-email"><a href="mailto:samantha.t@sliit.lk"><i class="fa-regular fa-envelope" style="margin-right:5px;"></i>samantha.t@sliit.lk</a></div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" style="background: linear-gradient(135deg, #10B981, #0EA5E9); font-size:2rem;">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <h3>Dr. Junius Anjana</h3>
+        <span class="team-role">Co-Supervisor</span>
+        <p style="font-size:0.88rem; margin:0.5rem 0; color:var(--text-muted);">Department of Information Technology<br>SLIIT, Malabe, Sri Lanka</p>
+        <div class="team-email"><a href="mailto:junius.a@sliit.lk"><i class="fa-regular fa-envelope" style="margin-right:5px;"></i>junius.a@sliit.lk</a></div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" style="background: linear-gradient(135deg, #F43F5E, #F59E0B); font-size:2rem;">
+          <i class="fa-solid fa-user-doctor"></i>
+        </div>
+        <h3>Prof. Jithangi Wanigasinghe</h3>
+        <span class="team-role">External Supervisor</span>
+        <p style="font-size:0.88rem; margin:0.5rem 0; color:var(--text-muted);">Department of Paediatrics<br>Faculty of Medicine, University of Colombo</p>
+        <div class="team-email"><a href="mailto:jithangi@pdt.cmb.ac.lk"><i class="fa-regular fa-envelope" style="margin-right:5px;"></i>jithangi@pdt.cmb.ac.lk</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DECLARATION -->
+<section>
+  <div class="container fade-in">
+    <div class="card" style="max-width:760px; margin:0 auto; border-left:4px solid var(--primary);">
+      <h3 style="margin-bottom:1rem; color:var(--text-primary);">
+        <i class="fa-solid fa-certificate" style="color:var(--primary); margin-right:8px;"></i>
+        Academic Declaration
+      </h3>
+      <p style="font-size:0.92rem;">We declare that this is our own work and this project does not incorporate without acknowledgement any material previously submitted for a degree or diploma in any other university or institute of higher learning. To the best of our knowledge and belief, it does not contain any material previously published or written by another person except where the acknowledgement is made in the text.</p>
+      <div style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:1rem;">
+        <div style="background:var(--bg-muted); border-radius:10px; padding:0.8rem 1.2rem; font-size:0.85rem;">
+          <strong style="display:block;">Supervisor Sign-Off:</strong>
+          <span style="color:var(--text-muted);">5th November 2025</span>
+        </div>
+        <div style="background:var(--bg-muted); border-radius:10px; padding:0.8rem 1.2rem; font-size:0.85rem;">
+          <strong style="display:block;">Project Group:</strong>
+          <span style="color:var(--text-muted);">25-26J 383</span>
+        </div>
+        <div style="background:var(--bg-muted); border-radius:10px; padding:0.8rem 1.2rem; font-size:0.85rem;">
+          <strong style="display:block;">Programme:</strong>
+          <span style="color:var(--text-muted);">B.Sc. (Hons) IT — Specializing in IT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 <strong style="color:white;">Vocal Path</strong> · Group 25-26J 383 · Sri Lanka Institute of Information Technology (SLIIT)</p>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

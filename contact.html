@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .page-hero-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;}
+    .page-hero-wrap img{width:100%;border-radius:18px;box-shadow:0 12px 40px rgba(108,63,232,0.16);object-fit:cover;aspect-ratio:16/9;}
+    @media(max-width:760px){.page-hero-wrap{grid-template-columns:1fr;}.page-hero-wrap img{display:none;}}
+  </style>
+  <title>Contact — Vocal Path</title>
+  <meta name="description" content="Contact the Vocal Path Research Team — Group 25-26J 383, SLIIT.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/AppLogo1.png" alt="Vocal Path Logo" class="logo-icon" style="background: white; object-fit: contain; padding: 2px;">
+      Vocal<span>Path</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="domain.html">Domain</a></li>
+      <li><a href="milestones.html">Milestones</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="presentations.html">Presentations</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background: var(--grad-hero); padding: 7rem 0 3.5rem; border-bottom: 1px solid var(--border);">
+  <div class="container fade-in">
+    <div class="page-hero-wrap">
+      <div>
+        <div class="badge badge-primary"><i class="fa-solid fa-envelope"></i> Contact</div>
+        <h1 style="margin-top:0.6rem;">Get in <span class="grad-text">Touch</span></h1>
+        <p style="font-size:1.05rem;max-width:520px;margin-top:0.8rem;">Have questions about our research, or want to collaborate? Reach out to the Vocal Path team using the form or direct contact details below.</p>
+        <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <span class="tag"><i class="fa-solid fa-clock"></i> Replies within 48h</span>
+          <span class="tag"><i class="fa-solid fa-hospital"></i> Clinical Collaboration Welcome</span>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=700&q=80&auto=format&fit=crop" alt="Contact and communication" loading="eager">
+    </div>
+  </div>
+</div>
+
+<main>
+<section>
+  <div class="container fade-in">
+    <div class="grid-2" style="align-items:start; gap:2rem;">
+
+      <!-- FORM -->
+      <div class="card">
+        <h3 style="margin-bottom:1.5rem; color:var(--text-primary);">
+          <i class="fa-solid fa-paper-plane" style="color:var(--primary); margin-right:8px;"></i>
+          Send a Message
+        </h3>
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" class="form-control" placeholder="e.g. Research Collaboration Inquiry" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" class="form-control" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; border-radius:12px;">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        <div id="success-msg" style="display:none; margin-top:1rem; padding:1rem; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); border-radius:10px; color:#059669; font-weight:600;">
+          <i class="fa-solid fa-circle-check" style="margin-right:8px;"></i>
+          Message sent successfully! We'll reply within 2 business days.
+        </div>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div>
+        <div class="card" style="margin-bottom:1.2rem;">
+          <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.8rem;">
+            <div style="width:46px; height:46px; border-radius:12px; background:var(--bg-muted); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <h4 style="margin:0; color:var(--text-primary);">University Address</h4>
+              <p style="margin:0; font-size:0.88rem;">Sri Lanka Institute of Information Technology (SLIIT)</p>
+            </div>
+          </div>
+          <p style="margin:0; padding-left:3.8rem; font-size:0.9rem;">New Kandy Road, Malabe<br>Sri Lanka, 10115</p>
+        </div>
+
+        <div class="card" style="margin-bottom:1.2rem;">
+          <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.8rem;">
+            <div style="width:46px; height:46px; border-radius:12px; background:rgba(14,165,233,0.12); color:var(--secondary); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <h4 style="margin:0; color:var(--text-primary);">Phone</h4>
+              <p style="margin:0; font-size:0.88rem;">SLIIT General Line</p>
+            </div>
+          </div>
+          <p style="margin:0; padding-left:3.8rem; font-size:0.9rem;">+94 11 241 3900<br><span style="font-size:0.8rem; color:var(--text-muted);">Ask for Group 25-26J 383 · IT Department</span></p>
+        </div>
+
+        <div class="card" style="margin-bottom:1.2rem;">
+          <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.8rem;">
+            <div style="width:46px; height:46px; border-radius:12px; background:rgba(16,185,129,0.12); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <h4 style="margin:0; color:var(--text-primary);">Team Emails</h4>
+              <p style="margin:0; font-size:0.88rem;">Reach individual members directly</p>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:0.4rem; padding-left:3.8rem;">
+            <a href="mailto:IT22565044@my.sliit.lk" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>IT22565044@my.sliit.lk (Chithakshana)</a>
+            <a href="mailto:IT22590862@my.sliit.lk" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>IT22590862@my.sliit.lk (Serasinghe)</a>
+            <a href="mailto:IT22563064@my.sliit.lk" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>IT22563064@my.sliit.lk (Rathninda)</a>
+            <a href="mailto:IT22273758@my.sliit.lk" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>IT22273758@my.sliit.lk (Fernando)</a>
+          </div>
+        </div>
+
+        <div class="card" style="border-left:4px solid var(--amber);">
+          <h4 style="color:var(--text-primary); margin-bottom:0.5rem;"><i class="fa-solid fa-hospital" style="color:var(--amber); margin-right:8px;"></i>Clinical Collaboration</h4>
+          <p style="font-size:0.88rem; margin:0;">For clinical research collaboration or access to our datasets, please contact our external supervisor Prof. Jithangi Wanigasinghe at the Faculty of Medicine, University of Colombo.</p>
+          <div class="team-email" style="margin-top:0.6rem;"><a href="mailto:jithangi@pdt.cmb.ac.lk"><i class="fa-regular fa-envelope" style="margin-right:5px;"></i>jithangi@pdt.cmb.ac.lk</a></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 <strong style="color:white;">Vocal Path</strong> · Group 25-26J 383 · Sri Lanka Institute of Information Technology (SLIIT)</p>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('contact-form').reset();
+    document.getElementById('success-msg').style.display = 'block';
+    setTimeout(() => { document.getElementById('success-msg').style.display = 'none'; }, 5000);
+  }
+</script>
+</body>
+</html>

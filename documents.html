@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .page-hero-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .page-hero-wrap img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(108, 63, 232, 0.16);
+      object-fit: cover;
+      aspect-ratio: 16/9;
+    }
+
+    @media(max-width:760px) {
+      .page-hero-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .page-hero-wrap img {
+        display: none;
+      }
+    }
+  </style>
+  <title>Documents — Vocal Path</title>
+  <meta name="description" content="All project documents for Vocal Path Research Group 25-26J 383 SLIIT.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/AppLogo1.png" alt="Vocal Path Logo" class="logo-icon" style="background: white; object-fit: contain; padding: 2px;">
+        Vocal<span>Path</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="domain.html">Domain</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="documents.html" class="active">Documents</a></li>
+        <li><a href="presentations.html">Presentations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div style="background: var(--grad-hero); padding: 7rem 0 3.5rem; border-bottom: 1px solid var(--border);">
+    <div class="container fade-in">
+      <div class="page-hero-wrap">
+        <div>
+          <div class="badge badge-primary"><i class="fa-solid fa-folder-open"></i> Project Documents</div>
+          <h1 style="margin-top:0.6rem;">Research <span class="grad-text">Documents</span></h1>
+          <p style="font-size:1.05rem;max-width:520px;margin-top:0.8rem;">Access all produced and pending documents for
+            the Vocal Path research project.</p>
+          <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.5rem;">
+            <span class="tag"><i class="fa-solid fa-file-pdf"></i> Research Paper</span>
+            <span class="tag"><i class="fa-solid fa-file-contract"></i> Proposal</span>
+            <span class="tag"><i class="fa-solid fa-database"></i> Max 20 MB</span>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1568667256549-094345857637?w=700&q=80&auto=format&fit=crop"
+          alt="Research documents and papers" loading="eager">
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <div class="container fade-in">
+        <div class="grid-2" style="align-items:start; gap:2rem;">
+
+          <!-- AVAILABLE -->
+          <div>
+            <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:1.5rem;">
+              <div
+                style="width:36px; height:36px; border-radius:10px; background:rgba(16,185,129,0.12); color:var(--accent); display:flex; align-items:center; justify-content:center;">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h3 style="margin:0;">Available Documents</h3>
+            </div>
+
+            <a href="Documents/TAF_25-26J 383_Stuttering .pdf" class="doc-item" target="_blank">
+              <div class="doc-item-icon" style="background:rgba(245,158,11,0.12); color:var(--amber);">
+                <i class="fa-solid fa-file-signature"></i>
+              </div>
+              <div class="doc-info">
+                <strong>Project Charter</strong>
+                <span>Scope, novelty, objectives &amp; constraints — TAF 25-26J 383</span>
+              </div>
+              <i class="fa-solid fa-arrow-down-to-bracket" style="color:var(--primary); margin-left:auto;"></i>
+            </a>
+
+            <a href="Documents/_Research_Proposal _Stuttering.2.pdf" class="doc-item" target="_blank">
+              <div class="doc-item-icon" style="background:rgba(244,63,94,0.12); color:var(--rose);">
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+              <div class="doc-info">
+                <strong>Project Proposal Document</strong>
+                <span>Research proposal with problem statement, objectives & methodology</span>
+              </div>
+              <i class="fa-solid fa-arrow-down-to-bracket" style="color:var(--primary); margin-left:auto;"></i>
+            </a>
+
+            <a href="Documents/Vocal_Path-Research Paper_25-26J -383.pdf" class="doc-item" target="_blank">
+              <div class="doc-item-icon" style="background:rgba(108,63,232,0.12); color:var(--primary);">
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+              <div class="doc-info">
+                <strong>Research Paper </strong>
+                <span>Full academic paper — with describing entire system design</span>
+              </div>
+              <i class="fa-solid fa-arrow-down-to-bracket" style="color:var(--primary); margin-left:auto;"></i>
+            </a>
+
+            <!-- INFO CARD -->
+            <div class="card" style="margin-top:1.5rem; border-left:4px solid var(--accent);">
+              <h4 style="color:var(--text-primary); margin-bottom:0.5rem;"><i class="fa-solid fa-file-lines"
+                  style="color:var(--accent); margin-right:8px;"></i>Research Paper Contents</h4>
+              <ul
+                style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.88rem; color:var(--text-muted);">
+                <li>• Introduction & Clinical Background on Stuttering</li>
+                <li>• Literature Survey & Related Work</li>
+                <li>• 4-Gap Research Problem Statement</li>
+                <li>• Wav2Vec2 XLS-R 300M System Architecture</li>
+                <li>• Stutter-Type Classification (Random Forest 98.34%)</li>
+                <li>• SVM Fluency Classifier (89.75% Accuracy)</li>
+                <li>• LSTM Progress Dashboard Design</li>
+                <li>• Experimental Results & Comparison Tables</li>
+                <li>• Conclusion & Future Work</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- PENDING -->
+          <div>
+            <div style="display:flex; align-items:center; gap:0.8rem; margin-bottom:1.5rem;">
+              <div
+                style="width:36px; height:36px; border-radius:10px; background:rgba(245,158,11,0.12); color:var(--amber); display:flex; align-items:center; justify-content:center;">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <h3 style="margin:0;">Pending Documents</h3>
+            </div>
+
+            <div class="doc-item pending">
+              <div class="doc-item-icon" style="background:rgba(245,158,11,0.12); color:var(--amber);">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <div class="doc-info">
+                <strong>Check List Documents</strong>
+                <span>Assessment review checklists — Pending Final Phase</span>
+              </div>
+              <i class="fa-solid fa-hourglass-half" style="color:var(--amber); margin-left:auto;"></i>
+            </div>
+
+            <div class="doc-item pending">
+              <div class="doc-item-icon" style="background:rgba(14,165,233,0.12); color:var(--secondary);">
+                <i class="fa-solid fa-book"></i>
+              </div>
+              <div class="doc-info">
+                <strong>Final Document — Main Report</strong>
+                <span>Comprehensive final thesis document — Pending Final Phase</span>
+              </div>
+              <i class="fa-solid fa-lock" style="color:var(--secondary); margin-left:auto;"></i>
+            </div>
+
+            <div class="doc-item pending">
+              <div class="doc-item-icon" style="background:rgba(14,165,233,0.12); color:var(--secondary);">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <div class="doc-info">
+                <strong>Final Document — Annexes (3 volumes)</strong>
+                <span>Supporting data, code listings & evaluation reports — Pending</span>
+              </div>
+              <i class="fa-solid fa-lock" style="color:var(--secondary); margin-left:auto;"></i>
+            </div>
+
+            <div class="card" style="margin-top:1.5rem; border-left:4px solid var(--secondary);">
+              <h4 style="color:var(--text-primary); margin-bottom:0.5rem;"><i class="fa-solid fa-circle-info"
+                  style="color:var(--secondary); margin-right:8px;"></i>Document Policy</h4>
+              <p style="font-size:0.88rem; margin:0;">Documents are uploaded here within 48 hours of submission. Pending
+                documents will be made available upon completion of the respective project phase. All documents are
+                maintained for a maximum storage of <strong>20 MB</strong> as per SLIIT guidelines.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 <strong style="color:white;">Vocal Path</strong> · Group 25-26J 383 · Sri Lanka Institute of Information
+        Technology (SLIIT)</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
+
+
