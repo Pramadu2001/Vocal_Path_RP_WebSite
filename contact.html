@@ -62,22 +62,23 @@
           <i class="fa-solid fa-paper-plane" style="color:var(--primary); margin-right:8px;"></i>
           Send a Message
         </h3>
-        <form id="contact-form" onsubmit="handleSubmit(event)">
+        <form action="https://formsubmit.co/vocalpathrp@gmail.com" method="POST">
+          <input type="hidden" name="_template" value="table">
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" class="form-control" placeholder="Your full name" required>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+            <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
           </div>
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" class="form-control" placeholder="e.g. Research Collaboration Inquiry" required>
+            <input type="text" id="subject" name="_subject" class="form-control" placeholder="e.g. Research Collaboration Inquiry" required>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" class="form-control" placeholder="Write your message here..." required></textarea>
+            <textarea id="message" name="message" class="form-control" placeholder="Write your message here..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; border-radius:12px;">
             <i class="fa-solid fa-paper-plane"></i> Send Message
@@ -128,10 +129,10 @@
             </div>
           </div>
           <div style="display:flex; flex-direction:column; gap:0.4rem; padding-left:3.8rem;">
-            <a href="mailto:IT22565044@my.sliit.lk" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>IT22565044@my.sliit.lk (Chithakshana)</a>
-            <a href="mailto:IT22590862@my.sliit.lk" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>IT22590862@my.sliit.lk (Serasinghe)</a>
-            <a href="mailto:IT22563064@my.sliit.lk" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>IT22563064@my.sliit.lk (Rathninda)</a>
-            <a href="mailto:IT22273758@my.sliit.lk" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>IT22273758@my.sliit.lk (Fernando)</a>
+            <a href="mailto:Kpramadushehan2001@gmail.com" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>Kpramadushehan2001@gmail.com (Chithakshana)</a>
+            <a href="mailto:chalaninethranjali@gmail.com" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>chalaninethranjali@gmail.com (Serasinghe)</a>
+            <a href="mailto:Isenerunethum2001@gmail.com" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>Isenerunethum2001@gmail.com (Rathninda)</a>
+            <a href="mailto:amilaisuru2001@gmail.com" style="font-size:0.85rem; color:var(--secondary); text-decoration:none;"><i class="fa-solid fa-at" style="margin-right:5px;"></i>amilaisuru2001@gmail.com (Fernando)</a>
           </div>
         </div>
 
@@ -162,12 +163,7 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    document.getElementById('contact-form').reset();
-    document.getElementById('success-msg').style.display = 'block';
-    setTimeout(() => { document.getElementById('success-msg').style.display = 'none'; }, 5000);
-  }
+
 </script>
 </body>
 </html>
